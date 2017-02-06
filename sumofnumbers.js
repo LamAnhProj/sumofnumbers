@@ -25,19 +25,20 @@ function sumWhile(nums) {
 }
 
 console.log(sumWhile(testNums));
+
 function sumRecursion(nums) {
   if (nums.length === 0) {
     return 0;
   }
   else {
-    return nums[0] = sumRecurcion(nums.slice(i, nums.length));
+    return nums[0] + sumRecursion(nums.slice(1, nums.length));
   }
 }
 
 console.log(sumRecursion(testNums));
 
 function sumThesimpleWay(nums) {
-  _.reduce(nums, function(memo, num){ return memo + num; }, 0);
+  return _.reduce(nums, function memoizer(memo, num) { return memo + num; }, 0);
 }
 
 console.log(sumThesimpleWay(testNums));
